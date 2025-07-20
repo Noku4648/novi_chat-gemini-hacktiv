@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "db7fc225-95cb-4a9d-8e48-405565f0bd74",
+		"name": "chatbot-gemini",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32910460"
+	},
+	"item": [
+		{
+			"name": "request text",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prompt\":\"halo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/generate-text",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"generate-text"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/novi.astuti/Pictures/ff/00f7a3d7b48b223878956a089f4d1ee7.jpg"
+						},
+						{
+							"key": "prompt",
+							"value": "Jelaskan 1 kata aja",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/generate-from-image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"generate-from-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/Users/novi.astuti/Downloads/test.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/generate-from-document",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"generate-from-document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request audio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "audio",
+							"type": "file",
+							"src": "/C:/Users/novi.astuti/Downloads/10-second English listening practice for beginners - StoryTimeEnglish.mp3"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/generate-from-audio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"generate-from-audio"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
